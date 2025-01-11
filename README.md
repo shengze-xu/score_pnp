@@ -27,9 +27,9 @@ cd score_pnp
 
 ### 2) Download Pretrained Score Function
 
-- Download **DnCNN denoiser** trained on the ImageNet 256x256 dataset [Pretrained DnCNN link](https://huggingface.co/deepinv/dncnn/resolve/main/dncnn_sigma2_color.pth?download=true). The default save directory is `./pretrained_models`.
-- Download **DRUNet denoiser** trained on the ImageNet 256x256 dataset [Pretrained DRUNet link](https://huggingface.co/deepinv/drunet/resolve/main/drunet_color.pth?download=true). The default save directory is `./pretrained_models`.
-- Download **variance-preserving score neural network** trained on the ImageNet 256x256 dataset [Pretrained VP score link](https://drive.google.com/drive/folders/1jElnRoFv7b31fG0v6pTSQkelbSX3xGZh). The default save directory is `./pretrained_models`.
+- Download **DnCNN denoiser** trained on the ImageNet 256x256 dataset [Pretrained DnCNN link](https://huggingface.co/deepinv/dncnn/resolve/main/dncnn_sigma2_color.pth?download=true). The default save directory is `./pretrained_models/dncnn`.
+- Download **DRUNet denoiser** trained on the ImageNet 256x256 dataset [Pretrained DRUNet link](https://huggingface.co/deepinv/drunet/resolve/main/drunet_color.pth?download=true). The default save directory is `./pretrained_models/drunet`.
+- Download **variance-preserving score neural network** trained on the ImageNet 256x256 dataset [Pretrained VP score link](https://drive.google.com/drive/folders/1jElnRoFv7b31fG0v6pTSQkelbSX3xGZh). The default save directory is `./pretrained_models/score`.
 
 ### 2) Download blurring kernel
 
@@ -43,6 +43,10 @@ conda create -n Scorepnp python=3.9.19
 conda activate Scorepnp
 
 pip install -r requirements.txt
+```
+
+```
+change the path 'model_dir' in ./deepinv/loss/metric.py
 ```
 
 ## Run experiment
